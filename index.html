@@ -1,144 +1,412 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang di Website Saya</title>
+    <title>DAVINCI - Joki Rank & Gendong VIP Mobile Legends</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#7928CA',
+                            pink: '#FF0080',
+                            cyan: '#00DFD8',
+                            blue: '#007CF0',
+                            dark: '#0B0F19',
+                            card: '#161F33',
+                            accent: '#F59E0B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .gradient-text {
+            background: linear-gradient(90deg, #00DFD8 0%, #007CF0 50%, #FF0080 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
+        .gradient-btn {
+            background: linear-gradient(135deg, #7928CA 0%, #FF0080 100%);
         }
-
-        header {
-            background: linear-gradient(135deg, #007bff, #00d2ff);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+        .gradient-btn:hover {
+            background: linear-gradient(135deg, #6b21b8 0%, #e00071 100%);
         }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .glass-card {
+            background: rgba(22, 31, 51, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background: #222;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #00d2ff;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .card h2 {
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #e9ecef;
-            color: #666;
-            font-size: 0.9rem;
+        .warning-glow {
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
         }
     </style>
 </head>
-<body>
+<body class="bg-brand-dark text-slate-100 font-sans min-h-screen flex flex-col selection:bg-brand-pink selection:text-white">
 
-    <header>
-        <h1>Selamat Datang di Website Saya</h1>
-        <p>Solusi Digital & Layanan Profesional Terbaik</p>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 glass-card border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center font-black text-2xl tracking-tighter text-white shadow-lg">
+                    D
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider gradient-text">DAVINCI</span>
+                    <span class="block text-[10px] tracking-widest text-slate-400 uppercase font-bold">Mobile Legends Service</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#layanan" class="hover:text-brand-cyan transition-colors">Layanan</a>
+                <a href="#estimasi" class="hover:text-brand-cyan transition-colors">Kalkulator & AI</a>
+                <a href="#pembayaran" class="hover:text-brand-cyan transition-colors">Metode Pembayaran</a>
+                <a href="#faq" class="hover:text-brand-cyan transition-colors">FAQ</a>
+            </nav>
+
+            <a href="https://wa.me/6282256799172?text=Halo%20Admin%20DAVINCI,%20saya%20ingin%20konsultasi%20orderan%20joki/gendong" 
+               target="_blank" 
+               class="gradient-btn px-5 py-2.5 rounded-full font-bold text-sm shadow-lg hover:shadow-brand-pink/20 transition-all flex items-center gap-2">
+                <i class="fab fa-whatsapp text-lg">text</i> Live Chat WA
+            </a>
+        </div>
     </header>
 
-    <nav>
-        <a href="#tentang">Tentang</a>
-        <a href="#layanan">Layanan</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
-
-    <div class="container">
-        <section id="tentang" class="card">
-            <h2>Tentang Kami</h2>
-            <p>Ini adalah website siap pakai yang dapat Anda sesuaikan dengan kebutuhan usaha, portofolio, atau profil pribadi Anda. Tampilan didesain agar responsif dan nyaman diakses melalui HP maupun komputer desktop.</p>
-        </section>
-
-        <section id="layanan" class="card">
-            <h2>Layanan Kami</h2>
-            <p>Kami menyediakan berbagai layanan berkualitas untuk membantu perkembangan bisnis dan kebutuhan digital Anda.</p>
-            <a href="#kontak" class="btn">Hubungi Kami</a>
-        </section>
-
-        <section id="kontak" class="card">
-            <h2>Hubungi Kami</h2>
-            <p>Memiliki pertanyaan atau ingin bekerja sama? Kirimkan pesan atau hubungi kami melalui kontak di bawah ini:</p>
-            <p style="margin-top: 10px;"><strong>Email:</strong> kontak@domain.com</p>
-            <p><strong>WhatsApp:</strong> +62 812-3456-7890</p>
-        </section>
+    <!-- Banner Peringatan Wajib Konfirmasi (Sticky Top Alert) -->
+    <div class="bg-amber-500/10 border-b border-amber-500/30 text-amber-300 py-3 px-4 text-center text-sm font-medium">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="bg-amber-500 text-black px-2 py-0.5 rounded text-xs font-bold uppercase animate-pulse">Penting</span>
+            <span>Wajib konfirmasi pesanan & total bayar ke WhatsApp Admin <strong>082256799172</strong> sebelum melakukan pembayaran!</span>
+            <a href="https://wa.me/6282256799172" target="_blank" class="underline font-bold hover:text-white">Hubungi Sekarang &rarr;</a>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Website Saya. All rights reserved.</p>
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-brand-cyan/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-brand-cyan text-xs font-bold uppercase tracking-widest mb-6 border border-brand-cyan/30">
+                <i class="fas fa-bolt text-amber-400"></i> Proses Cepat, Aman & Profesional 100%
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 leading-tight">
+                Push Rank Tanpa Stres Bersama <br><span class="gradient-text">DAVINCI MLBB SERVICES</span>
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
+                Menyediakan **Jasa Joki Rank** dikerjakan oleh Pro Player berpengalaman serta **Jasa Gendong VIP** (Main Bareng) untuk Anda yang ingin mabar dan naik rank dengan aman tanpa lepas akun!
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#layanan" class="gradient-btn px-8 py-4 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-transform flex items-center gap-3">
+                    <i class="fas fa-gamepad"></i> Lihat Paket Layanan
+                </a>
+                <a href="#pembayaran" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold text-base border border-slate-700 hover:border-slate-600 transition-all flex items-center gap-3">
+                    <i class="fas fa-qrcode text-brand-cyan"></i> Cara & Pembayaran
+                </a>
+            </div>
+
+            <!-- Stats Badge -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-16">
+                <div class="glass-card p-4 rounded-2xl border-slate-800">
+                    <div class="text-2xl font-black text-brand-cyan">100%</div>
+                    <div class="text-xs text-slate-400 font-medium">Aman & Anti Banned</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border-slate-800">
+                    <div class="text-2xl font-black text-brand-pink">99.8%</div>
+                    <div class="text-xs text-slate-400 font-medium">Winrate Tinggi</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border-slate-800">
+                    <div class="text-2xl font-black text-purple-400">Fast Order</div>
+                    <div class="text-xs text-slate-400 font-medium">Langsung Diolah</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border-slate-800">
+                    <div class="text-2xl font-black text-amber-400">24/7</div>
+                    <div class="text-xs text-slate-400 font-medium">Live Chat Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-16 bg-slate-900/50 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black tracking-tight mb-3">Layanan Unggulan <span class="gradient-text">DAVINCI</span></h2>
+                <p class="text-slate-400">Pilih jenis jasa yang Anda butuhkan sesuai keinginan Anda</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Jasa Joki Rank Card -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group hover:border-brand-purple/50 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/10 rounded-full blur-2xl group-hover:bg-brand-purple/30 transition-all"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center text-2xl text-brand-purple mb-6">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Jasa Joki Rank (Lepas Akun)</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Akun Anda dimainkan langsung oleh Pro Player DAVINCI dengan Winrate tinggi dan proses pengerjaan kilat. Garansi privacy & keamanan 100%.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-cyan"></i> Pengerjaan Cepat (Fast Work)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-cyan"></i> Bebas Pilih Request Hero / Role (S&K)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-cyan"></i> Kerahasiaan Akun Dijamin Aman</li>
+                    </ul>
+                    <a href="https://wa.me/6282256799172?text=Halo%20Admin%20DAVINCI,%20saya%20mau%20order%20Jasa%20Joki%20Rank" 
+                       target="_blank" 
+                       class="block text-center bg-slate-800 hover:bg-brand-purple text-white font-bold py-3 px-6 rounded-xl transition-all border border-slate-700">
+                        Order Joki Rank Sekarang
+                    </a>
+                </div>
+
+                <!-- Jasa Gendong VIP / Mabar Card -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group hover:border-brand-pink/50 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-pink/10 rounded-full blur-2xl group-hover:bg-brand-pink/30 transition-all"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-brand-pink/20 border border-brand-pink/40 flex items-center justify-center text-2xl text-brand-pink mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Jasa Gendong VIP (Main Bareng / Mabar)</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Anda main menggunakan akun sendiri dalam satu lobby bersama 2-4 Pro Player/Gendong DAVINCI. Bebas starlight, bebas stress, winrate terjamin!
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-pink"></i> Tanpa Perlu Serahkan Akun (100% Safe)</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-pink"></i> Belajar Tips & Strategy Langsung Saat Game</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-pink"></i> Lobby Rapi, Anti Lose Streak</li>
+                    </ul>
+                    <a href="https://wa.me/6282256799172?text=Halo%20Admin%20DAVINCI,%20saya%20mau%20order%20Jasa%20Gendong%20VIP%20(Mabar)" 
+                       target="_blank" 
+                       class="block text-center gradient-btn text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg hover:shadow-brand-pink/30">
+                        Order Gendong VIP Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PETUNJUK PEMESANAN & ALUR KONFIRMASI -->
+    <section class="py-12 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 border border-amber-500/30 warning-glow bg-amber-500/5">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="space-y-3 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase">
+                            <i class="fas fa-exclamation-triangle"></i> Prosedur Penting Pemesanan
+                        </div>
+                        <h3 class="text-2xl font-black text-amber-300">Wajib Konfirmasi Via WhatsApp Sebelum Transfer!</h3>
+                        <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
+                            Agar orderan Anda diproses dengan cepat dan tidak terjadi salah nominal, mohon untuk 
+                            <strong class="text-white">menghubungi WhatsApp Admin terlebih dahulu</strong> untuk mengonfirmasi ketersediaan slot, jenis paket, dan total pembayaran sebelum melakukan transfer.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/6282256799172?text=Halo%20Admin%20DAVINCI,%20saya%20ingin%20mengonfirmasi%20pesanan%20dan%20pembayaran%20joki" 
+                       target="_blank" 
+                       class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-xl shadow-xl transition-all flex items-center gap-3 shrink-0">
+                        <i class="fab fa-whatsapp text-2xl"></i> Konfirmasi ke WA Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODE PEMBAYARAN SECTION -->
+    <section id="pembayaran" class="py-16 bg-slate-900/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-cyan font-bold text-sm tracking-widest uppercase">Pembayaran Resmi</span>
+                <h2 class="text-3xl font-black tracking-tight mt-1 mb-3">Pilihan Metode Pembayaran <span class="gradient-text">DAVINCI</span></h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">
+                    Gunakan QRIS All Payment atau E-Wallet di bawah ini setelah melakukan konfirmasi ke Admin WhatsApp.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- QRIS Card -->
+                <div class="glass-card p-6 rounded-3xl border border-slate-700/80 text-center flex flex-col justify-between items-center group hover:border-brand-cyan transition-all">
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Scan QRIS (All Payment)</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/20 text-green-400 border border-green-500/30">Otomatis</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-2xl mb-4 shadow-inner inline-block relative cursor-pointer group/img" onclick="openQrModal()">
+                            <img src="qr_ID1026544152535_05.07.26_1783259341_1783259341597_2.jpeg" 
+                                 alt="QRIS Pembayaran DAVINCI TESLA GROUP" 
+                                 class="w-52 h-auto mx-auto rounded-lg object-contain">
+                            <div class="absolute inset-0 bg-black/60 rounded-2xl opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-2">
+                                <i class="fas fa-search-plus"></i> Klik Perbesar
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-slate-300 mb-1">TESLA GROUP</p>
+                        <p class="text-[11px] text-slate-400 font-mono mb-4">NMID: ID1026544152535</p>
+                    </div>
+                    <button onclick="openQrModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-xs font-bold py-2.5 rounded-xl transition-all border border-slate-700">
+                        <i class="fas fa-expand mr-1"></i> Perbesar QRIS
+                    </button>
+                </div>
+
+                <!-- DANA Card -->
+                <div class="glass-card p-6 rounded-3xl border border-slate-700/80 flex flex-col justify-between group hover:border-blue-500 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-black text-xl">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-white">DANA</h4>
+                                    <span class="text-xs text-slate-400">E-Wallet Direct Transfer</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 p-4 rounded-2xl border border-slate-800 mb-6">
+                            <p class="text-xs text-slate-400 mb-1">Nomor Akun DANA:</p>
+                            <div class="text-xl font-mono font-bold text-blue-400 tracking-wider mb-2">085652242674</div>
+                            <p class="text-xs text-slate-400">Atas Nama: <strong class="text-slate-200">DAVINCI Store / Tesla Group</strong></p>
+                        </div>
+                    </div>
+
+                    <button onclick="copyToClipboard('085652242674', 'Nomor DANA')" 
+                            class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white font-bold py-3 rounded-xl border border-blue-500/40 transition-all flex items-center justify-center gap-2 text-sm">
+                        <i class="fas fa-copy"></i> Salin Nomor DANA
+                    </button>
+                </div>
+
+                <!-- GOPAY Card -->
+                <div class="glass-card p-6 rounded-3xl border border-slate-700/80 flex flex-col justify-between group hover:border-emerald-500 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-xl">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-white">GOPAY</h4>
+                                    <span class="text-xs text-slate-400">E-Wallet Direct Transfer</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/60 p-4 rounded-2xl border border-slate-800 mb-6">
+                            <p class="text-xs text-slate-400 mb-1">Nomor Akun GOPAY:</p>
+                            <div class="text-xl font-mono font-bold text-emerald-400 tracking-wider mb-2">082256799172</div>
+                            <p class="text-xs text-slate-400">Atas Nama: <strong class="text-slate-200">DAVINCI Store / Tesla Group</strong></p>
+                        </div>
+                    </div>
+
+                    <button onclick="copyToClipboard('082256799172', 'Nomor GOPAY')" 
+                            class="w-full bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white font-bold py-3 rounded-xl border border-emerald-500/40 transition-all flex items-center justify-center gap-2 text-sm">
+                        <i class="fas fa-copy"></i> Salin Nomor GOPAY
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Catatan Transaksi -->
+    <section id="faq" class="py-16 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-black text-center mb-8">Pertanyaan Umum (FAQ)</h2>
+            <div class="space-y-4">
+                <div class="glass-card p-5 rounded-2xl border-slate-800">
+                    <h3 class="font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-brand-cyan"></i> Kenapa harus konfirmasi WhatsApp dulu sebelum bayar?
+                    </h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Konfirmasi di awal bertujuan untuk memastikan ketersediaan penjoki/lobby mabar, mencatat spesifikasi akun (login/hero), serta memastikan Anda mendapatkan instruksi jumlah transfer yang tepat agar pesanan langsung diproses tanpa penundaan.
+                    </p>
+                </div>
+                <div class="glass-card p-5 rounded-2xl border-slate-800">
+                    <h3 class="font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-brand-cyan"></i> Bagaimana cara mengirimkan bukti pembayaran?
+                    </h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Setelah melakukan transfer via QRIS, DANA, atau GOPAY, tangkap layar (screenshot) struk bukti transfer dan kirimkan langsung ke chat WhatsApp Admin di <strong class="text-white">082256799172</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-slate-950 border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2">&copy; 2026 <strong class="text-slate-300">DAVINCI MLBB SERVICES</strong>. All rights reserved.</p>
+            <p>Official WhatsApp Live Chat: <a href="https://wa.me/6282256799172" class="text-brand-cyan hover:underline">082256799172</a></p>
+        </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282256799172?text=Halo%20Admin%20DAVINCI,%20saya%20ingin%20tanya%20joki/gendong%20VIP" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all flex items-center justify-center text-2xl group"
+       title="Hubungi Admin WA">
+        <i class="fab fa-whatsapp"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-slate-700 shadow-xl">
+            Live Chat WhatsApp (24/7)
+        </span>
+    </a>
+
+    <!-- Modal QRIS Zoom -->
+    <div id="qrModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-card max-w-md w-full p-6 rounded-3xl text-center relative border border-slate-700">
+            <button onclick="closeQrModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="font-bold text-lg text-white mb-1">Scan QRIS DAVINCI</h3>
+            <p class="text-xs text-amber-400 mb-4 font-semibold">⚠️ Pastikan sudah konfirmasi ke Admin WA sebelum scan!</p>
+            <div class="bg-white p-3 rounded-2xl inline-block mb-4">
+                <img src="qr_ID1026544152535_05.07.26_1783259341_1783259341597_2.jpeg" 
+                     alt="QRIS Large" 
+                     class="w-full max-w-xs h-auto mx-auto rounded-lg">
+            </div>
+            <p class="text-xs text-slate-400">TESLA GROUP - NMID: ID1026544152535</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-24 right-6 z-50 bg-slate-800 text-white px-4 py-3 rounded-xl border border-slate-700 shadow-2xl hidden items-center gap-3 text-sm">
+        <i class="fas fa-check-circle text-green-400 text-lg"></i>
+        <span id="toastMsg">Teks berhasil disalin!</span>
+    </div>
+
+    <!-- JavaScript Scripts -->
+    <script>
+        function openQrModal() {
+            document.getElementById('qrModal').classList.remove('hidden');
+            document.getElementById('qrModal').classList.add('flex');
+        }
+
+        function closeQrModal() {
+            document.getElementById('qrModal').classList.add('hidden');
+            document.getElementById('qrModal').classList.remove('flex');
+        }
+
+        function copyToClipboard(text, label) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`${label} (${text}) berhasil disalin!`);
+            }).catch(err => {
+                showToast(`Gagal menyalin. Silakan salin manual: ${text}`);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3000);
+        }
+    </script>
 </body>
-</html>
+                                                                                                                                                         </html>
